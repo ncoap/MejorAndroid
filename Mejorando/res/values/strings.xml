@@ -5,14 +5,14 @@
     <string name="action_share">Compartir</string>
     <string name="descripcion_imagen_header">Hotel 1</string>
     
-	<string name="msg_share">Te comparto esta habitación que me gustó</string>	
+	<string name="msg_share">He compartido esto por Dropbox</string>	
 	<string name="msg_rate">Dejanos tu calificación</string>
 	
 	<string name="msg_yes">Sí</string>	
 	<string name="msg_no">No</string>
 	<string name="open">Abrir</string>
 	<string name="close">Cerrar</string>
-	<string name="mensaje">Create</string>
+	<string name="mensaje">Dejanos tu calficación</string>
 	<string name="busqueda">Ingrese su búsqueda</string>
 	
 	<string name="descripcion_imagen">Hotel caro</string>
