@@ -6,53 +6,51 @@
     tools:context=".MainActivity" >
 
    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:orientation="vertical" >
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical" >
 
-        <ImageView
-            android:id="@+id/iv_Header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/descripcion_imagen_header"
-            android:src="@drawable/hotel1" />
+       <ImageView
+           android:id="@+id/iv_Header"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:contentDescription="@string/descripcion_imagen_header"
+           android:src="@drawable/hotel1" />
 
-        <TextView
-            android:id="@+id/tv_usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tv_usuario" 
-            android:labelFor="@+id/et_usuario"/>
+       <TextView
+           android:id="@+id/tv_usuario"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:labelFor="@+id/et_usuario"
+           android:text="@string/tv_usuario" />
 
-        <EditText
-            android:id="@+id/et_usuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/ingrese_usuario"
-            android:imeOptions="actionSend"
-            android:inputType="text" >
+       <EditText
+           android:id="@+id/et_usuario"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:ems="10"
+           android:hint="@string/ingrese_usuario"
+           android:imeOptions="actionSend"
+           android:inputType="text" >
+       </EditText>
 
-        </EditText>
-        
-         <Button
-            android:id="@+id/bt_enviar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bt_text_enviar" />
+       <Button
+           android:id="@+id/bt_enviar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/bt_text_enviar" />
 
-         <ListView
-             android:id="@+id/lv_usuario"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content" >
+       <ListView
+           android:id="@+id/lv_usuario"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       </ListView>
 
-         </ListView>
-         <Button
-            android:id="@+id/bt_enviar2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bt_text_enviar" />
-         
-    </LinearLayout>
+       <Button
+           android:id="@+id/bt_enviar2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/bt_text_enviar" />
+   </LinearLayout>
 
 </ScrollView>

@@ -7,7 +7,7 @@
     tools:context=".Fragmento">
     
     <fragment 
-        android:id="@+id/tv_fragment"
+        android:id="@+id/fragment_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
  		class = "com.mejorando.Fragmento"

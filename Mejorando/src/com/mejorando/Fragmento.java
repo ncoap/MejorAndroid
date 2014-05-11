@@ -10,20 +10,10 @@ import android.widget.TextView;
 public class Fragmento extends Fragment {
 
 	TextView tv_fragment_nombre;
-	
-	public void setNombre(String nombre){
-		if(nombre!=null){	
-			tv_fragment_nombre.setText(nombre);
-		}
-	}
-	
+
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		
-		Bundle argumentos = getArguments();
-		String nombre = (String) argumentos.get("nombre");
-		setNombre(nombre);
 	}
 
 	@Override
@@ -35,5 +25,10 @@ public class Fragmento extends Fragment {
 		return view;
 	}
 	
-
+	public void setNombre(String nombre){
+		if(nombre!=null){	
+			tv_fragment_nombre.setText(nombre);
+		}
+	}
+	
 }

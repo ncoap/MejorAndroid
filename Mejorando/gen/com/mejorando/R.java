@@ -29,9 +29,9 @@ public final class R {
         public static final int bt_enviar=0x7f080004;
         public static final int bt_enviar2=0x7f080006;
         public static final int et_usuario=0x7f080003;
+        public static final int fragment_1=0x7f080000;
         public static final int iv_Header=0x7f080001;
         public static final int lv_usuario=0x7f080005;
-        public static final int tv_fragment=0x7f080000;
         public static final int tv_fragment_nombre=0x7f080007;
         public static final int tv_usuario=0x7f080002;
     }

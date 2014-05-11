@@ -4,21 +4,25 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 	private boolean favorite = false;
 	private String msj_estado = "";
 	private static final ArrayList<String> lista_usuarios = new ArrayList<String>();
@@ -42,6 +46,24 @@ public class MainActivity extends Activity {
 				lista_usuarios);
 
 		lv_usuario.setAdapter(adapter);
+		lv_usuario.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				String name = adapter.getItem(arg2);
+				if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {//orientacion vertical
+					Intent accion = new Intent(getApplicationContext(),
+							DetalleActivity.class);
+					accion.putExtra("nombre", name);
+					startActivity(accion);
+				} else {
+					Fragmento frag = (Fragmento) getSupportFragmentManager()
+							.findFragmentById(R.id.fragment_1);
+					frag.setNombre(name);
+				}
+			}
+		});
 		bt_enviar.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -90,4 +112,5 @@ public class MainActivity extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
+
 }

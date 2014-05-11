@@ -1,17 +1,17 @@
 package com.mejorando;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
-public class DetalleActivity extends Activity {
+public class DetalleActivity extends FragmentActivity {
 	private boolean favorite = false;
 	
 	public void toggleClicked(View v) {
@@ -24,9 +24,8 @@ public class DetalleActivity extends Activity {
 		setContentView(R.layout.activity_detalle);
 		Intent i =  getIntent();
 		String nombre = i.getStringExtra("nombre");
-		
-		
-		
+		Fragmento frag= (Fragmento)getSupportFragmentManager().findFragmentById(R.id.fragment_1);
+		frag.setNombre(nombre);
 	}
 
 	@Override
