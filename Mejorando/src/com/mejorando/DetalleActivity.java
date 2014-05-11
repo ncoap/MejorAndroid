@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class SecondActivity extends Activity {
+public class DetalleActivity extends Activity {
 	private boolean favorite = false;
 	
 	public void toggleClicked(View v) {
@@ -21,7 +21,12 @@ public class SecondActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.second_main);
+		setContentView(R.layout.activity_detalle);
+		Intent i =  getIntent();
+		String nombre = i.getStringExtra("nombre");
+		
+		
+		
 	}
 
 	@Override

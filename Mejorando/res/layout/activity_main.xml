@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <LinearLayout
+   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:orientation="vertical" >
@@ -17,32 +17,42 @@
             android:contentDescription="@string/descripcion_imagen_header"
             android:src="@drawable/hotel1" />
 
-        <Button
-            android:id="@+id/bt_open"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/open" />
-
-        <Button
-            android:id="@+id/bt_close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/close" />
-
         <TextView
-            android:id="@+id/tv_mensaje"
+            android:id="@+id/tv_usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mensaje" 
-            android:labelFor="@+id/et_enviar"/>
+            android:text="@string/tv_usuario" 
+            android:labelFor="@+id/et_usuario"/>
 
         <EditText
-            android:id="@+id/et_enviar"
-            android:inputType="text"
+            android:id="@+id/et_usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10" >
+            android:ems="10"
+            android:hint="@string/ingrese_usuario"
+            android:imeOptions="actionSend"
+            android:inputType="text" >
+
         </EditText>
+        
+         <Button
+            android:id="@+id/bt_enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_text_enviar" />
+
+         <ListView
+             android:id="@+id/lv_usuario"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+         </ListView>
+         <Button
+            android:id="@+id/bt_enviar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_text_enviar" />
+         
     </LinearLayout>
 
 </ScrollView>

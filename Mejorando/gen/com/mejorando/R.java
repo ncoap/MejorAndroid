@@ -23,18 +23,22 @@ public final class R {
         public static final int rating_not_important=0x7f020005;
     }
     public static final class id {
-        public static final int action_dialog=0x7f080007;
-        public static final int action_fav=0x7f080005;
-        public static final int action_share=0x7f080006;
-        public static final int bt_close=0x7f080002;
-        public static final int bt_open=0x7f080001;
-        public static final int et_enviar=0x7f080004;
-        public static final int iv_Header=0x7f080000;
-        public static final int tv_mensaje=0x7f080003;
+        public static final int action_dialog=0x7f08000a;
+        public static final int action_fav=0x7f080008;
+        public static final int action_share=0x7f080009;
+        public static final int bt_enviar=0x7f080004;
+        public static final int bt_enviar2=0x7f080006;
+        public static final int et_usuario=0x7f080003;
+        public static final int iv_Header=0x7f080001;
+        public static final int lv_usuario=0x7f080005;
+        public static final int tv_fragment=0x7f080000;
+        public static final int tv_fragment_nombre=0x7f080007;
+        public static final int tv_usuario=0x7f080002;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int second_main=0x7f030001;
+        public static final int activity_detalle=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int fragmento=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -43,15 +47,20 @@ public final class R {
         public static final int action_fav=0x7f040001;
         public static final int action_share=0x7f040002;
         public static final int app_name=0x7f040000;
+        public static final int bt_text_enviar=0x7f040010;
         public static final int busqueda=0x7f04000b;
         public static final int close=0x7f040009;
         public static final int descripcion_imagen_header=0x7f040003;
+        public static final int ingrese_contrasena=0x7f04000f;
+        public static final int ingrese_usuario=0x7f04000e;
         public static final int mensaje=0x7f04000a;
         public static final int msg_no=0x7f040007;
         public static final int msg_rate=0x7f040005;
         public static final int msg_share=0x7f040004;
         public static final int msg_yes=0x7f040006;
         public static final int open=0x7f040008;
+        public static final int tv_contrasena=0x7f04000d;
+        public static final int tv_usuario=0x7f04000c;
     }
     public static final class style {
         /** 

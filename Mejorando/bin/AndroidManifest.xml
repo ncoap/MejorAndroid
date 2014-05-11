@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mejorando.SecondActivity"
+            android:name="com.mejorando.DetalleActivity"
             android:label="@string/app_name" >
         </activity>
         

@@ -1,5 +1,7 @@
 package com.mejorando;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -10,15 +12,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	private boolean favorite = false;
-	private final static String TAG ="Debug";
-	private String msj_estado ="";
+	private String msj_estado = "";
+	private static final ArrayList<String> lista_usuarios = new ArrayList<String>();
 	private TextView tv_mensaje;
-	
 
 	public void toggleClicked(View v) {
 		Log.e("TAG", "toggle");
@@ -28,16 +32,26 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		msj_estado = "ESTADO : onCreate";
-		tv_mensaje = (TextView)findViewById(R.id.tv_mensaje);
-		tv_mensaje.setText(msj_estado);
-		
-		Button bt_open = (Button)findViewById(R.id.bt_open);
-		Button bt_close = (Button)findViewById(R.id.bt_close);
-		
-		bt_open.setOnClickListener(new OpenListener());
-		bt_close.setOnClickListener(new CloseListener());
-	
+
+		final EditText et_usuario = (EditText) findViewById(R.id.et_usuario);
+		ListView lv_usuario = (ListView) findViewById(R.id.lv_usuario);
+		Button bt_enviar = (Button) findViewById(R.id.bt_enviar);
+
+		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+				getApplicationContext(), android.R.layout.simple_list_item_1,
+				lista_usuarios);
+
+		lv_usuario.setAdapter(adapter);
+		bt_enviar.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String usuario = et_usuario.getText().toString();
+				lista_usuarios.add(usuario);
+				adapter.notifyDataSetChanged();
+			}
+		});
+
 	}
 
 	@Override
@@ -76,24 +90,4 @@ public class MainActivity extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	
-	public class CloseListener implements OnClickListener{
-
-		@Override
-		public void onClick(View v) {
-			finish();
-		}
-	}
-	
-	public class OpenListener implements OnClickListener{
-
-		@Override
-		public void onClick(View v) {
-			Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
-			startActivity(intent);
-		}
-	}
-
-	
-
 }
