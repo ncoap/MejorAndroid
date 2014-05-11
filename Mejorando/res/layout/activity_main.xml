@@ -10,6 +10,12 @@
        android:layout_height="wrap_content"
        android:orientation="vertical" >
 
+       <ImageView
+           android:id="@+id/imageView1"
+           android:contentDescription="@string/descripcion_imagen"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:src="@drawable/hotel2" />
 
    </LinearLayout>
 

@@ -15,6 +15,9 @@
 	<string name="mensaje">Create</string>
 	<string name="busqueda">Ingrese su búsqueda</string>
 	
+	<string name="descripcion_imagen">Hotel caro</string>
+	
+	
 	<string name="tv_usuario">Usuario:</string>
 	<string name="tv_contrasena">Contraseña:</string>
 	<string name="ingrese_usuario">Ingrese su Usuario</string>

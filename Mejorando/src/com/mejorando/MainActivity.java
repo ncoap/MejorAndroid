@@ -24,7 +24,7 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 	private boolean favorite = false;
-	
+
 	public void toggleClicked(View v) {
 		Log.e("TAG", "toggle");
 	}
