@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">Ejemplo</string>
+    <string name="action_fav">Favorito</string>
+    <string name="action_share">Compartir</string>
+    <string name="descripcion_imagen_header">Hotel 1</string>
+    
+	<string name="msg_share">Te comparto esta habitación que me gustó</string>	
+	<string name="msg_rate">Dejanos tu calificación</string>
+	
+	<string name="msg_yes">Sí</string>	
+	<string name="msg_no">No</string>
+	<string name="open">Abrir</string>
+	<string name="close">Cerrar</string>
+	<string name="mensaje">Create</string>
+	<string name="busqueda">Ingrese su búsqueda</string>
+	
+	
+	<string-array name="array_rate">
+	    <item>Muy Malo</item>
+	    <item>Malo</item>
+	    <item>Bueno</item>
+	    <item>Muy Bueno</item>
+	    <item>Excelente</item>
+	</string-array>
+	
+	<string-array name="dialog_options">
+	    <item>Opción A</item>
+	    <item>Opción B</item>
+	</string-array>
+    
+
+</resources>
