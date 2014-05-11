@@ -24,10 +24,7 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 	private boolean favorite = false;
-	private String msj_estado = "";
-	private static final ArrayList<String> lista_usuarios = new ArrayList<String>();
-	private TextView tv_mensaje;
-
+	
 	public void toggleClicked(View v) {
 		Log.e("TAG", "toggle");
 	}
@@ -36,44 +33,6 @@ public class MainActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		final EditText et_usuario = (EditText) findViewById(R.id.et_usuario);
-		ListView lv_usuario = (ListView) findViewById(R.id.lv_usuario);
-		Button bt_enviar = (Button) findViewById(R.id.bt_enviar);
-
-		final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-				getApplicationContext(), android.R.layout.simple_list_item_1,
-				lista_usuarios);
-
-		lv_usuario.setAdapter(adapter);
-		lv_usuario.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				String name = adapter.getItem(arg2);
-				if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {//orientacion vertical
-					Intent accion = new Intent(getApplicationContext(),
-							DetalleActivity.class);
-					accion.putExtra("nombre", name);
-					startActivity(accion);
-				} else {
-					Fragmento frag = (Fragmento) getSupportFragmentManager()
-							.findFragmentById(R.id.fragment_1);
-					frag.setNombre(name);
-				}
-			}
-		});
-		bt_enviar.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				String usuario = et_usuario.getText().toString();
-				lista_usuarios.add(usuario);
-				adapter.notifyDataSetChanged();
-			}
-		});
-
 	}
 
 	@Override

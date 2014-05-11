@@ -23,22 +23,12 @@ public final class R {
         public static final int rating_not_important=0x7f020005;
     }
     public static final class id {
-        public static final int action_dialog=0x7f08000a;
-        public static final int action_fav=0x7f080008;
-        public static final int action_share=0x7f080009;
-        public static final int bt_enviar=0x7f080004;
-        public static final int bt_enviar2=0x7f080006;
-        public static final int et_usuario=0x7f080003;
-        public static final int fragment_1=0x7f080000;
-        public static final int iv_Header=0x7f080001;
-        public static final int lv_usuario=0x7f080005;
-        public static final int tv_fragment_nombre=0x7f080007;
-        public static final int tv_usuario=0x7f080002;
+        public static final int action_dialog=0x7f080002;
+        public static final int action_fav=0x7f080000;
+        public static final int action_share=0x7f080001;
     }
     public static final class layout {
-        public static final int activity_detalle=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int fragmento=0x7f030002;
+        public static final int activity_main=0x7f030000;
     }
     public static final class menu {
         public static final int main=0x7f070000;
