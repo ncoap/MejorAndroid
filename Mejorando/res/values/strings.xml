@@ -36,6 +36,9 @@
 	<string-array name="dialog_options">
 	    <item>Opción A</item>
 	    <item>Opción B</item>
+	    <item>Opción C</item>
+	    <item>Opción D</item>
+	    <item>Opción E</item>
 	</string-array>
     
 

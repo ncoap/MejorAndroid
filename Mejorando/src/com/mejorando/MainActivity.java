@@ -1,10 +1,7 @@
 package com.mejorando;
 
-import java.util.ArrayList;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,16 +10,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity {
+
+public class MainActivity extends FragmentActivity implements DialogoListener {
 	private boolean favorite = false;
 
 	public void toggleClicked(View v) {
@@ -67,9 +57,25 @@ public class MainActivity extends FragmentActivity {
 			share.setType("image/jpeg");
 			startActivity(Intent.createChooser(share, "Compartir"));
 			return true;
+			
+		case R.id.action_dialog:
+			Dialogo dialog= new Dialogo();
+			dialog.show(getSupportFragmentManager(), "dialogo");
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
+	}
+
+	@Override
+	public void onDialogPositiveClick(Dialogo dialog) {
+		Log.e("TAG","Dijo que si!!!");
+		
+	}
+
+	@Override
+	public void onDialogNegativeClick(Dialogo dialog) {
+		Log.e("TAG","Dijo que no!!!");
 	}
 
 }
